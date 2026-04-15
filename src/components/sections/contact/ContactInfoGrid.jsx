@@ -10,14 +10,14 @@ const ContactInfoGrid = () => {
                     <InfoCard 
                         icon={MapPin}
                         title="Office Location"
-                        line1="12 Academic Plaza, Suite 400"
-                        line2="Cambridge, MA 02138, USA"
+                        line1="1st Floor, building No. F7"
+                        line2="Sector 58, Noida, Uttar Pradesh, 201301"
                     />
                     <InfoCard 
                         icon={Phone}
                         title="Contact Number"
-                        line1="+1 (800) 555-WISDOM"
-                        line2="admissions@wisdomwaves.edu"
+                        line1="+91 70659 25013"
+                        line2="support@wisdomwaves.in"
                     />
                     <InfoCard 
                         icon={Clock}
