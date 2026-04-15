@@ -24,6 +24,7 @@ const ContactSplitForm = () => {
                 <img 
                     src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                     alt="Dr. Eleanor Vance" 
+                    loading="lazy"
                     className="w-full max-w-sm object-cover object-top h-full rounded-t-3xl opacity-90 grayscale-[20%]"
                 />
                 
@@ -56,6 +57,7 @@ const ContactSplitForm = () => {
                     <label className="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Full Name</label>
                     <input 
                       {...register("fullName", { required: "Full name is required" })}
+                      aria-invalid={errors.fullName ? "true" : "false"}
                       className="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow bg-white text-sm"
                       placeholder="Jonathan Doe"
                     />
@@ -69,6 +71,7 @@ const ContactSplitForm = () => {
                         required: "Email is required",
                         pattern: { value: /^\S+@\S+$/i, message: "Invalid email formatting" }
                       })}
+                      aria-invalid={errors.email ? "true" : "false"}
                       className="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow bg-white text-sm"
                       placeholder="john@university.edu"
                     />
@@ -82,6 +85,7 @@ const ContactSplitForm = () => {
                     <input 
                       type="tel"
                       {...register("phone", { required: "Phone number is required" })}
+                      aria-invalid={errors.phone ? "true" : "false"}
                       className="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow bg-white text-sm"
                       placeholder="+1 (555) 000-0000"
                     />
@@ -109,6 +113,7 @@ const ContactSplitForm = () => {
                   <label className="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Message</label>
                   <textarea 
                     {...register("message", { required: "Message cannot be empty" })}
+                    aria-invalid={errors.message ? "true" : "false"}
                     rows="4"
                     className="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow bg-white text-sm resize-none"
                     placeholder="How can we assist your research today?"

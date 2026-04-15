@@ -24,7 +24,7 @@ const Home = () => {
   };
 
   return (
-    <div className="w-full">
+    <main className="w-full">
       <MetaTags 
         title="Honorary Doctorate & PhD Programs | WisdomWaves" 
         description="Get globally recognized honorary doctorates, PhD, and DBA programs through international universities. Apply now with WisdomWaves."
@@ -38,7 +38,7 @@ const Home = () => {
       <Testimonials />
       <HomeFAQ />
       <CTA />
-    </div>
+    </main>
   );
 };
 

@@ -1,59 +1,33 @@
-import { useEffect } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const MetaTags = ({ 
     title = "WisdomWaves - The Pinnacle of Recognition", 
     description = "Global academic recognition platform offering Honorary Doctorates, PhD, and DBA programs.",
     imageUrl = "/assets/favicon.png",
-    schema = null
+    schema = null,
+    keywords = ""
 }) => {
-    useEffect(() => {
-        // 1. Dynamic DOM Title Manipulation
-        document.title = title;
-
-        // Helper string to mutate head arrays reliably safely across routing boundaries
-        const setMetaTag = (attr, key, content) => {
-            if (!content) return;
-            let element = document.querySelector(`meta[${attr}="${key}"]`);
-            if (!element) {
-                element = document.createElement('meta');
-                element.setAttribute(attr, key);
-                document.head.appendChild(element);
-            }
-            element.setAttribute('content', content);
-        };
-
-        // 2. Standard Descriptive HTML Meta
-        setMetaTag('name', 'description', description);
-
-        // 3. Open Graph Architecture for Social Previews (WhatsApp, LinkedIn, etc.)
-        setMetaTag('property', 'og:title', title);
-        setMetaTag('property', 'og:description', description);
-        setMetaTag('property', 'og:image', imageUrl);
-        setMetaTag('property', 'og:type', 'website');
-
-        // 4. Advanced JSON-LD Schema Configuration
-        if (schema) {
-            const scriptId = 'schema-json-ld';
-            let scriptElement = document.getElementById(scriptId);
-            if (!scriptElement) {
-                scriptElement = document.createElement('script');
-                scriptElement.setAttribute('type', 'application/ld+json');
-                scriptElement.id = scriptId;
-                document.head.appendChild(scriptElement);
-            }
-            scriptElement.text = JSON.stringify(schema);
-        }
-
-        // Cleanup configuration removes isolated payload artifacts to ensure 0 crossover bugs
-        return () => {
-            const scriptElement = document.getElementById('schema-json-ld');
-            if (scriptElement) {
-                scriptElement.remove();
-            }
-        }
-    }, [title, description, imageUrl, schema]); // Rerun mapping execution anytime deep route components shuffle this content
-
-    return null; // Silent logic wrapper parsing behind the operational view
+    return (
+        <Helmet>
+            <title>{title}</title>
+            <meta name="description" content={description} />
+            {keywords && <meta name="keywords" content={keywords} />}
+            
+            {/* Open Graph Architecture for Social Previews */}
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={description} />
+            <meta property="og:image" content={imageUrl} />
+            <meta property="og:type" content="website" />
+            
+            {/* Advanced JSON-LD Schema Configuration */}
+            {schema && (
+                <script type="application/ld+json">
+                    {JSON.stringify(schema)}
+                </script>
+            )}
+        </Helmet>
+    );
 };
 
 export default MetaTags;

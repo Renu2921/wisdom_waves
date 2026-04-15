@@ -21,7 +21,7 @@ const Programs = () => {
             <p className="text-gray-500 text-sm leading-relaxed mb-8">
               The highest academic honor given to individuals for their exceptional contribution to their respective fields and significant impact on society.
             </p>
-            <Link to="/about" className="inline-flex items-center text-sm font-semibold text-gray-900 hover:text-accent transition-colors">
+            <Link to="/honorary-doctorate" className="inline-flex items-center text-sm font-semibold text-gray-900 hover:text-accent transition-colors">
               Learn More <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </div>
@@ -36,7 +36,7 @@ const Programs = () => {
             <p className="text-gray-300 text-sm leading-relaxed mb-8 relative z-10 font-light">
               Rigorous academic endeavors prior to professional executives and researchers seeking to codify their experience into scholarly impact.
             </p>
-            <Link to="/about" className="inline-flex items-center text-sm font-semibold text-accent hover:text-white transition-colors relative z-10 pb-1 border-b border-accent/50 hover:border-white">
+            <Link to="/dba-phd-programs" className="inline-flex items-center text-sm font-semibold text-accent hover:text-white transition-colors relative z-10 pb-1 border-b border-accent/50 hover:border-white">
               Learn More <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </div>
@@ -50,7 +50,7 @@ const Programs = () => {
             <p className="text-gray-500 text-sm leading-relaxed mb-8">
               Recognizing professionals of high academic or professional standing for their ongoing commitment to sharing knowledge with the next generation.
             </p>
-            <Link to="/about" className="inline-flex items-center text-sm font-semibold text-gray-900 hover:text-accent transition-colors">
+            <Link to="/honorary-professorship" className="inline-flex items-center text-sm font-semibold text-gray-900 hover:text-accent transition-colors">
               Learn More <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </div>
