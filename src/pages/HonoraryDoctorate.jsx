@@ -4,8 +4,10 @@ import ProgramCard from '../components/ui/ProgramCard';
 import ProgramFAQ from '../components/ui/ProgramFAQ';
 import MetaTags from '../components/seo/MetaTags';
 import { Globe2, Briefcase, Award, Network, CheckCircle, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const HonoraryDoctorate = () => {
+  const navigate=useNavigate();
   const doctorateFaqs = [
       { question: "Is this a real academic degree?", answer: "It is an honorary academic recognition (honoris causa) rather than a traditional earned degree. It does not qualify you for professional licensing in fields like medicine or law, but holds massive prestige globally." },
       { question: "Can I use 'Dr.' in my title?", answer: "Yes, you are legally entitled to use 'Dr.' before your name or 'h.c.' after your name in professional, corporate, and social settings depending on regional norms." },
@@ -37,7 +39,7 @@ const HonoraryDoctorate = () => {
           <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-10">
             A prestigious recognition of your life's work, outstanding achievements, and significant contributions to society and your industry.
           </p>
-          <button className="bg-accent hover:bg-accent-hover text-primary font-bold px-8 py-4 rounded-full transition-all inline-flex items-center group shadow-[0_0_20px_rgba(244,185,66,0.3)] hover:shadow-[0_0_30px_rgba(244,185,66,0.5)]">
+          <button onClick={()=>navigate("/contact")} className="bg-accent hover:bg-accent-hover text-primary font-bold px-8 py-4 rounded-full transition-all inline-flex items-center group shadow-[0_0_20px_rgba(244,185,66,0.3)] hover:shadow-[0_0_30px_rgba(244,185,66,0.5)]">
              Apply Now <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
@@ -165,7 +167,7 @@ const HonoraryDoctorate = () => {
       {/* CTA Section */}
       <section className="bg-primary py-20 text-center px-6">
         <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8">Ready to formalize your legacy?</h2>
-        <button className="bg-accent hover:bg-accent-hover text-primary font-bold px-10 py-5 rounded-full transition-all text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1">
+        <button onClick={()=>navigate("/contact")} className="bg-accent hover:bg-accent-hover text-primary font-bold px-10 py-5 rounded-full transition-all text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1">
           Apply for Honorary Doctorate
         </button>
       </section>

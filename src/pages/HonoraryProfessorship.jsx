@@ -4,8 +4,10 @@ import ProgramCard from '../components/ui/ProgramCard';
 import ProgramFAQ from '../components/ui/ProgramFAQ';
 import MetaTags from '../components/seo/MetaTags';
 import { Users, Presentation, ShieldCheck, Globe, CheckCircle, ArrowRight, BookOpen } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const HonoraryProfessorship = () => {
+  const navigate=useNavigate();
   const professorshipFaqs = [
       { question: "Is this a full-time academic role?", answer: "No. The Honorary Professorship is an esteemed title designed to run parallel to your primary business or corporate operations, requiring minimal structured time." },
       { question: "Am I required to relocate to the campus?", answer: "No. You can deliver guest lectures, mentor doctoral candidates, and attend symposiums entirely online via global digital channels, or visit campuses dynamically." },
@@ -36,7 +38,7 @@ const HonoraryProfessorship = () => {
           <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-10">
             A prestigious appointment for industry veterans stepping into the academic realm to mentor the next generation.
           </p>
-          <button className="bg-accent hover:bg-accent-hover text-primary font-bold px-8 py-4 rounded-full transition-all inline-flex items-center group shadow-lg">
+          <button onClick={()=>navigate("/contact")} className="bg-accent hover:bg-accent-hover text-primary font-bold px-8 py-4 rounded-full transition-all inline-flex items-center group shadow-lg">
              Apply Now <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
@@ -167,7 +169,7 @@ const HonoraryProfessorship = () => {
 
       <section className="bg-primary py-20 text-center px-6">
         <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8">Share your expertise with the world.</h2>
-        <button className="bg-accent hover:bg-accent-hover text-primary font-bold px-10 py-5 rounded-full transition-all text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1">
+        <button  onClick={()=>navigate("/contact")} className="bg-accent hover:bg-accent-hover text-primary font-bold px-10 py-5 rounded-full transition-all text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1">
           Apply for Honorary Professorship
         </button>
       </section>

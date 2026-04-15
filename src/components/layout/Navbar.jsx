@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+const navigate=useNavigate()
   // Exact configured routes matching requested requirements
   const links = [
     { name: 'Home', path: '/' },
@@ -60,12 +60,12 @@ const Navbar = () => {
 
           {/* Desktop Apply Now Button (Right) */}
           <div className="hidden lg:flex flex-shrink-0">
-              <Link
-                to="/contact"
+              <button
+                onClick={()=>navigate("/contact")}
                 className="bg-accent hover:bg-accent-hover text-primary font-semibold px-6 py-2.5 rounded-full transition-transform duration-300 shadow-md hover:-translate-y-0.5 hover:shadow-lg text-sm"
               >
                 Apply Now
-              </Link>
+              </button>
           </div>
           
           {/* Mobile Menu Button */}

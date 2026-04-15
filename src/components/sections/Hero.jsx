@@ -1,7 +1,9 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate=useNavigate();
   return (
     <section className="relative bg-primary overflow-hidden pt-10 pb-24 lg:pt-20 lg:pb-32">
       {/* Abstract Background Waves Placeholder */}
@@ -22,9 +24,9 @@ const Hero = () => {
               A world-class consortium dedicated to awarding prestigious honorary doctorates and global academic recognition to visionaries shaping the future of society.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#apply" className="bg-accent hover:bg-accent-hover text-primary font-bold px-8 py-4 rounded-full transition-all flex items-center group shadow-lg">
+              <button onClick={()=>navigate("/contact")}  className="bg-accent hover:bg-accent-hover text-primary font-bold px-8 py-4 rounded-full transition-all flex items-center group shadow-lg">
                 Apply Now
-              </a>
+              </button>
               <a href="#programs" className="bg-primary-light hover:bg-gray-800 border border-gray-700 text-white font-semibold px-8 py-4 rounded-full transition-all flex items-center group">
                 Explore Programs
               </a>

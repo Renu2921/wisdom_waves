@@ -53,9 +53,9 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-sm font-semibold tracking-wider uppercase mb-4">Contact</h3>
             <ul className="space-y-3 text-sm text-gray-400">
-              <li>contact@wisdomwaves.org</li>
-              <li>+1 (555) 123-4567</li>
-              <li>123 Education Ave,<br />Innovation District,<br />NY 10001</li>
+              <li>support@wisdomwaves.in</li>
+              <li>+91 70659 25013</li>
+              <li>1st Floor, building No. F7<br />Sector 58, Noida, Uttar Pradesh<br />201301</li>
             </ul>
           </div>
         </div>

@@ -8,25 +8,25 @@ const ServicesGrid = () => {
       icon: Award,
       title: "Honorary Doctorate",
       description: "Recognition of exceptional lifetime contributions and leadership.",
-      link: "/contact"
+      link: "/honorary-doctorate"
     },
     {
       icon: GraduationCap,
       title: "Honorary PhD",
       description: "Prestigious validation of profound scholarly and societal impact.",
-      link: "/contact"
+      link: "/honorary-professorship"
     },
     {
       icon: Briefcase,
-      title: "MBA",
-      description: "Advanced business curriculum mastery for global corporate navigation.",
-      link: "/batches"
+      title:"PhD",
+      description: "Advanced research expertise and original knowledge creation for academic and scientific advancement.",
+      link: "/dba-phd-programs"
     },
     {
       icon: Network,
       title: "DBA",
       description: "Doctorate level research applied to real-world business complex.",
-      link: "/batches"
+      link: "/dba-phd-programs"
     }
   ];
 

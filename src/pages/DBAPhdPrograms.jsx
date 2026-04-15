@@ -4,8 +4,10 @@ import ProgramCard from '../components/ui/ProgramCard';
 import ProgramFAQ from '../components/ui/ProgramFAQ';
 import MetaTags from '../components/seo/MetaTags';
 import { BookOpen, GraduationCap, TrendingUp, Lightbulb, CheckCircle, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const DBAPhdPrograms = () => {
+  const navigate=useNavigate();
   const dbaFaqs = [
       { question: "How does a DBA differ from an MBA?", answer: "While an MBA provides generalized business management skills, a DBA is the terminal degree in business, focusing on original, applied research to solve immediate, complex corporate challenges." },
       { question: "Can I complete this while working full-time?", answer: "Absolutely. Both the DBA and modern PhD programs are engineered specifically for working executive leaders, featuring flexible remote supervision and timeline management." },
@@ -36,7 +38,7 @@ const DBAPhdPrograms = () => {
           <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-10">
             For scholars and executive leaders determined to conduct original research that solves complex real-world challenges.
           </p>
-          <button className="bg-accent hover:bg-accent-hover text-primary font-bold px-8 py-4 rounded-full transition-all inline-flex items-center group shadow-lg">
+          <button onClick={()=>navigate("/contact")} className="bg-accent hover:bg-accent-hover text-primary font-bold px-8 py-4 rounded-full transition-all inline-flex items-center group shadow-lg">
              Apply Now <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
@@ -165,7 +167,7 @@ const DBAPhdPrograms = () => {
 
       <section className="bg-primary py-20 text-center px-6">
         <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8">Ready to master your field?</h2>
-        <button className="bg-accent hover:bg-accent-hover text-primary font-bold px-10 py-5 rounded-full transition-all text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1">
+        <button onClick={()=>navigate("/contact")} className="bg-accent hover:bg-accent-hover text-primary font-bold px-10 py-5 rounded-full transition-all text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1">
           Apply for DBA / PhD
         </button>
       </section>
